@@ -1,0 +1,74 @@
+{
+  "name": "personnummer/personnummer",
+  "type": "utility",
+  "license": "MIT",
+  "description": "Validate Swedish social security numbers",
+  "authors": [
+    {
+      "name": "Fredrik Forsmo",
+      "homepage": "https://github.com/frozzare"
+    },
+    {
+      "name": "Rasmus Bengtsson",
+      "homepage": "https://github.com/rasmusbe"
+    },
+    {
+      "name": "Johannes Tegnér",
+      "homepage": "https://github.com/johannestegner"
+    }
+  ],
+  "keywords": [
+    "utility",
+    "personnummer",
+    "samordningsnummer",
+    "identify",
+    "security",
+    "swedish",
+    "social security number",
+    "personal identity number",
+    "personal id",
+    "co-ordination",
+    "coordination"
+  ],
+  "support": {
+    "issues": "https://github.com/personnummer/php/issues"
+  },
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "squizlabs/php_codesniffer": "^3.8",
+    "jchook/phpunit-assert-throws": "^1.0",
+    "phpunit/phpunit": "^10.5.5",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "Personnummer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Personnummer\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "vendor/bin/phpcs --standard=ruleset.xml",
+    "unittest": "vendor/bin/phpunit",
+    "test": [
+      "@lint",
+      "@unittest"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "8.1"
+    },
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
